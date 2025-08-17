@@ -1,1 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SUOSIL | Inversión en Biofertilizantes Circulares</title>
+  <meta name="description" content="Perfil de inversión de SUOSIL: planta modular para transformar lodos residuales en biofertilizantes Clase A en Ecuador y Colombia. Retornos >30 %, tecnología patentada, impacto ambiental y escalabilidad.">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f4f4f9;           /* fondo general claro */
+  --card: #ffffff;          /* tarjetas blancas */
+  --muted: #6b7280;         /* texto secundario */
+  --text: #111827;          /* texto principal oscuro */
+  --brand: #3b82f6;         /* azul para enlaces y botones */
+  --accent: #a78bfa;        /* acentos morados */
+  --ok: #10b981;            /* verde OK */
+  --warn: #f59e0b;          /* amarillo */
+  --bad: #ef4444;           /* rojo */
+  --grad: radial-gradient(1200px 800px at 90% -10%, rgba(59,130,246, .08), transparent 60%),
+          radial-gradient(900px 600px at 0% 110%, rgba(167,139,250, .08), transparent 60%),
+          linear-gradient(180deg, #f4f4f9, #f4f4f9);
+}
 
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  min-height: 100%;
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: var(--grad);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { color: var(--brand); text-decoration: none; }
+
+.container { max-width: 1180px; margin: auto; padding: 40px 28px; }
+
+h1 { font-size: 48px; line-height: 1.15; margin: 0.2em 0 0.4em; font-weight: 800; color: var(--text); }
+h2 { font-size: 30px; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+h3 { font-size: 20px; font-weight: 600; margin-bottom: 10px; color: var(--text); }
+h4 { font-size: 16px; font-weight: 600; margin-bottom: 8px; color: var(--text); }
+
+p { font-size: 16px; }
+
+.badge { display: inline-flex; gap: 8px; align-items: center; padding: 6px 10px; border: 1px solid #d1d5db; border-radius: 999px; color: var(--muted); font-size: 12px; }
+
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 24px;
+  color: var(--text);
+}
+
+.hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items: start; }
+
+.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+
+.btn {
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  background: #e5e7eb;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #d1d5db;
+  transform: translateY(-2px);
+}
+
+.btn.brand {
+  background: linear-gradient(135deg, var(--brand), #60a5fa);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(59,130,246, 0.25);
+}
+
+.btn.brand:hover { filter: brightness(1.1); }
+
+.grid { display: grid; gap: 24px; }
+.grid-2 { grid-template-columns: 1fr 1fr; }
+.grid-3 { grid-template-columns: repeat(3,1fr); }
+
+.kpis { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-top: 14px; }
+.kpi {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  color: var(--text);
+}
+.kpi b { display: block; font-size: 24px; margin-top: 6px; color: var(--ok); }
+
+.table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+.table th, .table td { padding: 14px 12px; border-bottom: 1px solid #d1d5db; font-size: 14px; }
+.table th { background: #e5e7eb; color: var(--brand); font-weight: 600; text-align: left; }
+
+.callout {
+  border-left: 4px solid var(--brand);
+  background: rgba(255,255,255,0.85);
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 10px;
+  color: var(--text);
+}
+
+.tag { font-size: 12px; color: var(--muted); }
+.pill {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 9999px;
+  background: rgba(0,0,0,0.03);
+  margin: 4px 6px 0 0;
+  color: var(--muted);
+}
+
+/* Timeline */
+
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  margin-top: 12px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #cbd5e1;
+}
+
+.t-item {
+  position: relative;
+  margin: 14px 0;
+  padding-left: 16px;
+}
+
+.t-item::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: var(--brand);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(59,130,246,.2);
+}
+
+.foot { margin: 30px 0 12px; text-align: center; color: #6b7280; font-size: 12px; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+/* Responsive */
+@media (max-width: 980px) {
+  .hero { grid-template-columns: 1fr; gap: 32px; }
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .kpis { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 18px; }
+  h4 { font-size: 14px; }
+  .btn { padding: 12px 16px; font-size: 14px; }
+  .container { padding: 20px 14px; }
+  .callout { font-size: 14px; padding: 12px 14px; }
+}
+</style>
+
+
+</head>
+<body>
+  <div class="container">
+    <!-- Hero -->
+    <div class="hero card">
+      <div>
+        <span class="badge">Economía Circular • Bioinsumos • Agua &amp; Suelo</span>
+        <h1>SUOSIL: Planta Modular para Transformar Lodos de PTAR en Biofertilizante Clase A</h1>
+        <p>Solución climáticamente inteligente para <b>valorizar lodos residuales</b> en <b>biofertilizantes líquidos y granulados</b> listos para el agro. Tecnología patentada, validada en Europa y diseñada para escalar en Ecuador y LATAM.</p>
+        <div class="hero-cta">
+          <a class="btn brand" href="#oferta">Ver Oferta de Inversión</a>
+          <a class="btn" href="#tecnologia">Cómo funciona</a>
+          <a class="btn" href="#impacto">Impacto &amp; ODS</a>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><span class="tag">CAPEX proyecto (ECU)</span><b>US$ 2,0 M</b><span class="tag">infraestructura + equipos</span></div>
+          <div class="kpi"><span class="tag">Consumo energético</span><b>25–75 kWh/t</b><span class="tag">10 kWh/t en pilotos</span></div>
+          <div class="kpi"><span class="tag">Capacidad</span><b>1–3 m³/h</b><span class="tag">módulos en contenedor 40’</span></div>
+          <div class="kpi"><span class="tag">Margen objetivo</span><b>50–70 %</b><span class="tag">precio de venta 3–5 US$/L</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Resumen de Inversión</h3>
+        <ul class="list">
+          <li><b>Problema:</b> &gt;60 % de aguas residuales en LATAM sin tratamiento; lodos con alto coste de disposición.</li>
+          <li><b>Solución:</b> proceso SUOSIL (electrohidráulico + ultrasonidos + ozono) sin químicos peligrosos, sin emisiones, <span class="mono">Clase A</span>.</li>
+          <li><b>Modelo:</b> venta de fertilizante líquido y granulado, tarifas por disposición de lodos, licencias/royalties.</li>
+          <li><b>Tracción técnica:</b> validaciones de laboratorio y campo en UE; cumplimiento límites de metales pesados.</li>
+          <li><b>Escala:</b> modular, replicable; alianzas con PTAR, GAD y cooperativas agrícolas.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Oportunidad / Propuesta -->
+    <div class="grid grid-2">
+      <div class="card">
+        <h2>Oportunidad</h2>
+        <p>Los lodos de PTAR son hoy un <i>pasivo</i> con altos costos (transporte, rellenos, emisiones). Con SUOSIL se convierten en <b>insumo gratuito</b> para producir biofertilizantes competitivos, reduciendo CAPEX/OPEX de manejo de lodos y creando nuevos ingresos.</p>
+        <div class="callout">
+          <b>Mercado local:</b> fertilizantes líquidos minoristas en Ecuador se mueven entre <b>US$ 5–27/L</b>. Posicionamos SUOSIL a <b>US$ 3–5/L</b> con costos de producción <b>US$ 1–2/L</b>.
+        </div>
+      </div>
+      <div class="card">
+        <h2>Propuesta de Valor</h2>
+        <ul class="list">
+          <li><b>Economía Circular:</b> 100 % de lodos tratados se transforma en productos útiles (líquido y granulado).</li>
+          <li><b>Desempeño agronómico:</b> N≈80 kg/t, P≈9,2 kg/t, K≈20 kg/t; dosis de aplicación eficientes (≈2,9 t/ha para meta de P).</li>
+          <li><b>Higiene y seguridad:</b> eliminación de patógenos y helmintos; cumplimiento límites UE de metales pesados.</li>
+          <li><b>Energía y costos:</b> sin secado térmico ni centrifugado; 25–75 kWh/t (≤10 kWh/t en pilotos).</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tecnología -->
+    <div id="tecnologia" class="card">
+      <h2>Tecnología SUOSIL (Patente FI 130216 B)</h2>
+      <div class="grid grid-3">
+        <div>
+          <h3>1) Choque electrohidráulico</h3>
+          <p>Ondas de choque y cavitación inducida desintegran matriz orgánica/inorgánica y <b>desinfectan</b> profundamente.</p>
+        </div>
+        <div>
+          <h3>2) Cavitación ultrasónica</h3>
+          <p>Liberación de nutrientes y <b>oxidación avanzada</b> de contaminantes (radicales OH·) sin químicos externos.</p>
+        </div>
+        <div>
+          <h3>3) Ozonización simultánea</h3>
+          <p>Oxidación final, eliminación de olores y patógenos, sin subproductos tóxicos. Generación <b>in situ</b>.</p>
+        </div>
+      </div>
+      <div class="grid grid-3" style="margin-top: 10px;">
+        <div class="callout"><b>Arquitectura modular:</b> contenedor de 40’, sala HMI/PLC, red hidráulica y eléctrica, ventilación y seguridad industrial.</div>
+        <div class="callout"><b>Capacidad:</b> 1–3 m³/h. Admite lodos con 96–98 % de humedad. Tiempo de proceso ≈1 h/t.</div>
+        <div class="callout"><b>Producto:</b> Biofertilizante líquido Clase A + granulado estabilizado. Sin residuos a vertedero.</div>
+      </div>
+    </div>
+
+    <!-- Modelo de ingreso / Clientes -->
+    <div class="grid grid-2">
+      <div class="card">
+        <h2>Modelo de Ingresos</h2>
+        <ul class="list">
+          <li>Venta de biofertilizante <b>líquido</b> (granel, bidones, IBC).</li>
+          <li>Venta de biofertilizante <b>granulado</b> para suelos y mezcla con enmiendas.</li>
+          <li><b>Tarifas</b> por disposición/tratamiento de lodos de terceros (PTAR, industrias).</li>
+          <li><b>Licencias</b>/royalties de tecnología y soporte técnico.</li>
+        </ul>
+        <p class="tag">Precio objetivo: 3–5 US$/L · Costo prod.: 1–2 US$/L · Margen bruto 50–70 %.</p>
+      </div>
+      <div class="card">
+        <h2>Clientes & Go‑to‑Market</h2>
+        <p>PTAR públicas/privadas, agroindustrias
+
+, y <b>cooperativas</b> (maíz, arroz, banano, cacao, papa, hortalizas y flores). Canal con GAD y asociaciones agrícolas. Demostraciones en parcelas con universidades (INIAP, UCE, UTA, ESPE, UTPL, etc.).</p>
+        <div>
+          <span class="pill">Pilotos agronómicos</span>
+          <span class="pill">Contratos de lodos</span>
+          <span class="pill">Certificación nacional</span>
+          <span class="pill">Carbon credits (MRV)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Finanzas -->
+    <div class="card">
+      <h2>Resumen Financiero (escenarios comparativos)</h2>
+      <div class="grid grid-2">
+        <div>
+          <h3>Escenario Ecuador (CAPEX base)</h3>
+          <table class="table">
+            <tr><th>Concepto</th><th>Monto</th></tr>
+            <tr><td>Infraestructura + equipos SUOSIL</td><td><b>US$ 1,500,000</b></td></tr>
+            <tr><td>Capacitación, pruebas y certificación</td><td><b>US$ 300,000</b></td></tr>
+            <tr><td>Gestión circular y difusión</td><td><b>US$ 200,000</b></td></tr>
+            <tr><td><b>TOTAL CAPEX estimado</b></td><td><b>US$ 2,000,000</b></td></tr>
+          </table>
+          <p class="tag">Cronograma: 12 meses implementación tecnológica + 12 meses pruebas/certificación (en paralelo) + 6 meses despliegue comercial.</p>
+        </div>
+        <div>
+          <h3>Escenario Colombia (modelo MBA)</h3>
+          <table class="table">
+            <tr><th>Indicador</th><th>Resultado</th></tr>
+            <tr><td>Horizonte</td><td>5 años</td></tr>
+            <tr><td>TIR (proyecto)</td><td><b>≈ 57,5 %</b></td></tr>
+            <tr><td>MIRR</td><td>≈ 27 %</td></tr>
+            <tr><td>Payback descontado</td><td>≈ 38–39 meses</td></tr>
+            <tr><td>VAN</td><td><b>≈ US$ 3,27 M</b></td></tr>
+            <tr><td>Ingresos año 1 → 5</td><td>≈ 5,13 M → 7,51 M (€/US$ eq.)</td></tr>
+          </table>
+          <p class="tag">Financiamiento: 80 % deuda @ 10,48 % EA · 20 % equity.</p>
+        </div>
+      </div>
+      <div class="callout">
+        <b>Notas:</b> Las cifras de Ecuador (US$) y Colombia (€/US$) son referencias; la versión final se ajustará según sitio, mix de producto y contratos de abastecimiento.
+      </div>
+    </div>
+
+    <!-- Ejemplo Económico Ecuador -->
+    <div class="card">
+      <h2>Ejemplo Económico – Ecuador</h2>
+      <p>Para un módulo con capacidad de 1 m³/h instalado en Quito:</p>
+      <table class="table">
+        <tr><th>Concepto</th><th>Detalle</th></tr>
+        <tr><td>Materia prima</td><td>Lodos residuales de PTAR (costo = 0; ingreso ≈ US$ 20/t)</td></tr>
+        <tr><td>Producción</td><td>≈ 7 000 L/día de biofertilizante líquido</td></tr>
+        <tr><td>Precio de venta</td><td>US$ 3,5/L</td></tr>
+        <tr><td>Ingresos mensuales</td><td>≈ US$ 735 000</td></tr>
+        <tr><td>Costos operativos</td><td>≈ US$ 220 000</td></tr>
+        <tr><td>EBITDA mensual</td><td><b>≈ US$ 515 000</b></td></tr>
+      </table>
+      <canvas id="ecuadorChart" style="margin-top:18px;"></canvas>
+      <p class="tag">Payback &lt; 4 años con contratos de lodos y ventas locales aseguradas.</p>
+    </div>
+
+    <!-- Ejemplo Económico Colombia -->
+    <div class="card">
+      <h2>Ejemplo Económico – Colombia</h2>
+      <p>Basado en un proyecto en una PTAR metropolitana:</p>
+      <table class="table">
+        <tr><th>Indicador</th><th>Resultado</th></tr>
+        <tr><td>CAPEX</td><td>≈ US$ 2,0 M</td></tr>
+        <tr><td>Horizonte</td><td>5 años</td></tr>
+        <tr><td>TIR</td><td><b>≈ 57,5 %</b></td></tr>
+        <tr><td>MIRR</td><td>≈ 27 %</td></tr>
+        <tr><td>Payback descontado</td><td>≈ 39 meses</td></tr>
+        <tr><td>VAN</td><td><b>≈ US$ 3,27 M</b></td></tr>
+        <tr><td>Ingresos año 1 → 5</td><td>≈ 5,13 M → 7,51 M</td></tr>
+      </table>
+      <canvas id="colombiaChart" style="margin-top:18px;"></canvas>
+      <p class="tag">Modelo: 80 % deuda · 20 % equity.</p>
+    </div>
+
+    <!-- Impacto -->
+    <div id="impacto" class="grid grid-3">
+      <div class="card">
+        <h2>Impacto Ambiental</h2>
+        <ul class="list">
+          <li>Eliminación de vertido de lodos y disminución de GEI (sin secado térmico).</li>
+          <li>Mejora de suelos: ácidos húmicos, NPK balanceado y micronutrientes.</li>
+          <li>Higiene: eliminación de patógenos y helmintos; metales pesados bajo límites.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Impacto Social</h2>
+        <ul class="list">
+          <li>Empleo verde y transferencia tecnológica local.</li>
+          <li>Reducción de costos para municipios y operadores de PTAR.</li>
+          <li>Productividad agrícola y resiliencia climática.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>ODS alineados</h2>
+        <div>
+          <span class="pill">ODS 6 Agua limpia</span>
+          <span class="pill">ODS 12 Producción responsable</span>
+          <span class="pill">ODS 13 Acción por el clima</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Roadmap -->
+    <div class="card">
+      <h2>Roadmap de Implementación (18–24 meses)</h2>
+      <div class="timeline">
+
+        <div class="t-item"><b>M0–M3:</b> Diseño ejecutivo, permisos, contratos de lodos (MoUs con PTAR).</div>
+        <div class="t-item"><b>M4–M9:</b> Fabricación e instalación de módulos; integración HMI/PLC; comisionamiento.</div>
+        <div class="t-item"><b>M10–M12:</b> Arranque, SOPs, capacitación, pruebas de calidad y bioseguridad.</div>
+        <div class="t-item"><b>M13–M18:</b> Ensayos agronómicos con universidades, formulaciones por cultivo, certificación nacional.</div>
+        <div class="t-item"><b>M18–M24:</b> Escalado comercial, contratos agrícolas, MRV & créditos de carbono.</div>
+      </div>
+    </div>
+
+    <!-- Equipo & Alianzas -->
+    <div class="grid grid-2">
+      <div class="card">
+        <h2>Equipo & Alianzas Clave</h2>
+        <ul class="list">
+          <li><b>MAATE</b> – coordinación técnica y normativa.</li>
+          <li><b>Universidades/INIAP</b> – I+D, ensayos y personalización de fórmulas.</li>
+          <li><b>Empresa Pública Municipal de Agua</b> – operación en PTAR y logística de lodos.</li>
+          <li><b>Cooperativas agrícolas</b> – adopción y validación en campo.</li>
+          <li><b>Suosil OY (Finlandia)</b> – transferencia tecnológica, entrenamiento y equipamiento.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Ventajas Competitivas</h2>
+        <ul class="list">
+          <li>Patente y <b>know‑how</b> propietario; validaciones con laboratorios europeos.</li>
+          <li>Menor OPEX vs. compostaje/digestión/incineración.</li>
+          <li>Arquitectura modular y rápida puesta en marcha.</li>
+          <li>Portafolio dual (líquido + granulado) y servicios (tratamiento/lodos, licencias).</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Riesgos & Mitigaciones -->
+    <div class="card">
+      <h2>Riesgos & Mitigaciones</h2>
+      <div class="grid grid-3">
+        <div>
+          <h3>Abastecimiento de lodos</h3>
+          <p>Mitigación: contratos multianuales con PTAR y agroindustrias; tarifas competitivas vs. disposición tradicional.</p>
+        </div>
+        <div>
+          <h3>Regulatorio & certificación</h3>
+          <p>Mitigación: trabajo con MAATE/Agrocalidad; protocolos de calidad, bioseguridad y trazabilidad.</p>
+        </div>
+        <div>
+          <h3>Adopción del agricultor</h3>
+          <p>Mitigación: demostraciones en campo, soporte técnico y esquema de <i>pricing</i> por desempeño.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Oferta de Inversión -->
+    <div id="oferta" class="card">
+      <h2>Oferta de Inversión</h2>
+      <div class="grid grid-2">
+        <div>
+          <h3>Uso de fondos (US$ 2,0 M)</h3>
+          <table class="table">
+            <tr><th>Componente</th><th>Monto</th></tr>
+            <tr><td>Infraestructura y equipos SUOSIL</td><td><b>US$ 1,500,000</b></td></tr>
+            <tr><td>Capacitación, pruebas y certificación</td><td><b>US$ 300,000</b></td></tr>
+            <tr><td>Gestión circular y difusión</td><td><b>US$ 200,000</b></td></tr>
+          </table>
+        </div>
+        <div>
+          <h3>Estructura & Retornos guía</h3>
+          <ul class="list">
+            <li>Vehículo: SPV proyecto con colaterales sobre equipos y contratos.</li>
+            <li>Opción: 70–80 % deuda (project finance) + 20–30 % equity.</li>
+            <li>Objetivo: TIR proyecto > 30 % con payback < 4 años (según mix/volumen).</li>
+            <li>Salida: recompra, dividendos o expansión multi-sitio.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Argumentos por País -->
+    <section class="argumentos card">
+      <h2 style="text-align:center; margin-bottom:15px;">Argumentos Proyecto SUOSIL</h2>
+
+      <!-- Ecuador -->
+      <div style="margin-bottom:25px">
+        <h3 style="color:#1E88E5;">Ecuador</h3>
+        <h4>Problema actual</h4>
+        <ul>
+          <li>Más del 60 % de aguas residuales del país no recibe tratamiento adecuado.</li>
+          <li>PTAR generan lodos residuales que terminan en rellenos o almacenados sin disposición final.</li>
+          <li>Alto costo municipal (transporte, disposición, gestión) y riesgo sanitario/ambiental.</li>
+          <li>El agro ecuatoriano depende en más del 80 % de fertilizantes importados, generando vulnerabilidad (ej.: crisis 2022).</li>
+        </ul>
+        <h4>Propuesta SUOSIL</h4>
+        <ul>
+          <li>Planta modular que transforma lodos en biofertilizantes líquidos y granulados Clase A.</li>
+          <li>Tecnología validada en Europa (Finlandia), sin emisiones ni químicos peligrosos, con bajos costos energéticos (10–75 kWh/t).</li>
+          <li>Modelo circular: los lodos, pasivo, se convierten en materia prima gratuita.</li>
+        </ul>
+        <h4>Impacto para Ecuador</h4>
+        <ul>
+          <li>Ahorro municipal: hasta US$ 500,000/año en disposición de lodos por PTAR.</li>
+          <li>Nueva fuente de ingresos: biofertilizantes a US$ 3–5/L con costos de producción de US$ 1–2/L.</li>
+          <li>Sustitución de fertilizantes importados, reduciendo dependencia externa.</li>
+          <li>Contribución a ODS (6, 12, 13) y acceso a créditos de carbono y fondos internacionales.</li>
+          <li>Escalabilidad nacional: módulos en contenedor para ciudades como Ibarra, Ambato, Riobamba, Cuenca, Machala, Portoviejo.</li>
+        </ul>
+        <p style="font-weight:bold; margin-top:10px;">“Con SUOSIL, Ecuador pasa de gastar en manejar un residuo peligroso, a generar ingresos y fertilizantes propios para su agricultura. Tecnología validada, lista para escalar, alineada a economía circular y seguridad alimentaria. Inversión pública y privada con retorno económico, social y ambiental.”</p>
+      </div>
+
+      <!-- Colombia -->
+      <div>
+        <h3 style="color:#1E88E5;">Colombia</h3>
+        <h4>Problema actual</h4>
+        <ul>
+          <li>Colombia genera más de 7 millones de toneladas de lodos de PTAR por año.</li>
+          <li>La mayoría de ellos termina en rellenos sanitarios o suelos sin control, con altos costos y riesgos.</li>
+          <li>La agricultura depende de fertilizantes importados (NPK), con aumentos de precio del 200 % en 2022.</li>
+        </ul>
+        <h4>Propuesta SUOSIL</h4>
+        <ul>
+          <li>Planta modular que convierte lodos en biofertilizantes líquidos y granulados Clase A.</li>
+          <li>Tecnología validada en Europa, adaptable a PTAR urbanas/industriales en Colombia.</li>
+          <li>Bajos costos energéticos (10–75 kWh/t) y sin químicos peligrosos.</li>
+        </ul>
+        <h4>Impacto para Colombia</h4>
+        <ul>
+          <li>Ahorro en gestión de lodos: una PTAR metropolitana puede reducir más de US$ 1 millón/año.</li>
+          <li>Biofertilizante a US$ 3–5/L que puede reemplazar fertilizantes importados.</li>
+          <li>Beneficio para municipios y operadores en ciudades como Bogotá, Medellín, Cali, Barranquilla.</li>
+          <li>Alianzas con agroexportadores (café, banano, flores) con demanda inmediata.</li>
+          <li>Apoyo en financiamiento verde: Colombia cuenta con NDC 2030 y acceso a fondos internacionales para economía circular.</li>
+        </ul>
+        <p style="font-weight:bold; margin-top:10px;">“Con SUOSIL, Colombia transforma un pasivo ambiental en biofertilizante que reduce dependencia de insumos importados y genera ahorros a municipios y PTAR. Proyecto de economía circular, escalable, rentable y alineado con compromisos climáticos y agrícolas.”</p>
+      </div>
+      
+    </section>
+
+<!-- Contacto -->
+<div class="card">
+  <h2>Contacto</h2>
+  <p>
+    Solicita más información 
+    <a href="https://www.suosil.com/index.php/contacts" target="_blank" rel="noopener noreferrer">
+      aquí
+    </a>.
+  </p>
+
+  <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px;">
+  <a href="https://raw.githubusercontent.com/fabian0071982/suosil/main/files/An%C3%A1lisis_Financiero.pdf" 
+     target="_blank" 
+     aria-label="Descargar Análisis Financiero"
+     style="padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 4px;">
+    📊 Análisis Financiero
+  </a>
+
+  <a href="https://raw.githubusercontent.com/fabian0071982/suosil/main/files/PERFIL_DE_PROYECTO_SUOSIL_Ecuador.pdf" 
+     target="_blank" 
+     aria-label="Descargar Perfil de Proyecto"
+     style="padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 4px;">
+    📄 Perfil de Proyecto
+  </a>
+
+  <a href="https://raw.githubusercontent.com/fabian0071982/suosil/main/files/Propuesta_Obtención_Fertilizante_Orgánico.pdf" 
+     target="_blank" 
+     aria-label="Descargar Información de la Tecnología"
+     style="padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 4px;">
+    ⚙️ Información de la Tecnología
+  </a>
+</div>
+</div>
+
+    <!-- Pie de página -->
+    <div class="foot">© SUOSIL LATAM — Perfil para Inversionistas. Todos los derechos reservados.</div>
+  </div>
+
+   <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctxEc = document.getElementById('ecuadorChart');
+    if (ctxEc) {
+      new Chart(ctxEc, {
+        type: 'bar',
+        data: {
+          labels: ['Ingresos', 'Costos', 'EBITDA'],
+          datasets: [{ label: 'USD mensuales', data: [735000, 220000, 515000], backgroundColor: ['#22d3ee','#f59e0b','#10b981'] }]
+        },
+        options: { responsive: true, plugins: { legend: { display: false } } }
+      });
+    }
+
+    const ctxCo = document.getElementById('colombiaChart');
+    if (ctxCo) {
+      new Chart(ctxCo, {
+        type: 'line',
+        data: {
+          labels: ['Año 1', 'Año 2', 'Año 3', 'Año 4', 'Año 5'],
+          datasets: [{ label: 'Ingresos (USD M)', data: [5.13,5.6,6.2,6.8,7.51], borderColor:'#8b5cf6', backgroundColor:'rgba(139,92,246,0.3)', fill:true }]
+        },
+        options: { responsive:true, scales:{y:{beginAtZero:false}}, plugins:{legend:{position:'bottom'}} }
+      });
+    }
+  </script>
+</body>
+</html>
