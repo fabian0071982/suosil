@@ -6,105 +6,141 @@
   <title>SUOSIL | Inversión en Biofertilizantes Circulares</title>
   <meta name="description" content="Perfil de inversión de SUOSIL: planta modular para transformar lodos residuales en biofertilizantes Clase A en Ecuador y Colombia. Retornos >30 %, tecnología patentada, impacto ambiental y escalabilidad.">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0b1220;
-      --card: #0f172a;
-      --muted: #94a3b8;
-      --text: #e2e8f0;
-      --brand: #22d3ee;
-      --accent: #8b5cf6;
-      --ok: #10b981;
-      --warn: #f59e0b;
-      --bad: #ef4444;
-      --grad: radial-gradient(1200px 800px at 90% -10%, rgba(34,211,238, .15), transparent 60%),
-              radial-gradient(900px 600px at 0% 110%, rgba(139,92,246, .15), transparent 60%),
-              linear-gradient(180deg, #0b1220, #0b1220);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      min-height: 100%;
-      font-family: 'IBM Plex Sans', sans-serif;
-      background: var(--grad);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { color: var(--brand); text-decoration: none; }
-    .container { max-width: 1180px; margin: auto; padding: 40px 28px; }
-    h1 { font-size: 48px; line-height: 1.15; margin: 0.2em 0 0.4em; font-weight: 800; color: var(--text); }
-    h2 { font-size: 30px; font-weight: 700; margin-bottom: 16px; color: var(--text); }
-    h3 { font-size: 20px; font-weight: 600; margin-bottom: 10px; color: var(--text); }
-    h4 { font-size: 16px; font-weight: 600; margin-bottom: 8px; color: var(--text); }
-    p { font-size: 16px; }
-    .badge { display: inline-flex; gap: 8px; align-items: center; padding: 6px 10px; border: 1px solid #23304a; border-radius: 999px; color: var(--muted); font-size: 12px; }
-    .card {
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(6px);
-      border: 1px solid #23304a;
-      border-radius: 20px;
-      padding: 28px;
-      margin-bottom: 24px;
-    }
-    .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items: start; }
-    .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
-    .btn {
-      padding: 14px 20px;
-      border-radius: 12px;
-      border: 1px solid #23304a;
-      background: #111827;
-      color: #e5e7eb;
-      font-size: 15px;
-      font-weight: 500;
-      transition: background 0.3s ease, transform 0.3s ease;
-      text-align: center;
-    }
-    .btn:hover {
-      background: #1f2937;
-      transform: translateY(-2px);
-    }
-    .btn.brand {
-      background: linear-gradient(135deg, var(--brand), #60a5fa);
-      color: #0b1220;
-      font-weight: 700;
-      box-shadow: 0 2px 8px rgba(34,211,238, 0.25);
-    }
-    .btn.brand:hover { filter: brightness(1.1); }
-    .grid { display: grid; gap: 24px; }
-    .grid-2 { grid-template-columns: 1fr 1fr; }
-    .grid-3 { grid-template-columns: repeat(3,1fr); }
-    .kpis { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-top: 14px; }
-    .kpi { background: rgba(15,23,42,0.85); border: 1px solid #1e293b; padding: 20px; border-radius: 16px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
-    .kpi b { display: block; font-size: 24px; margin-top: 6px; color: var(--ok); }
-    .table { width: 100%; border-collapse: collapse; margin-top: 12px; }
-    .table th, .table td { padding: 14px 12px; border-bottom: 1px solid #334155; font-size: 14px; }
-    .table th { background: #1e293b; color: var(--brand); font-weight: 600; text-align: left; }
-    .callout { border-left: 4px solid var(--brand); background: rgba(11,18,32,0.9); padding: 14px 18px; border-radius: 12px; font-size: 15px; line-height: 1.6; margin-top: 10px; }
-    .tag { font-size: 12px; color: var(--muted); }
-    .pill { display: inline-block; padding: 6px 12px; font-size: 13px; border: 1px solid #334155; border-radius: 9999px; background: rgba(255,255,255,0.05); margin: 4px 6px 0 0; color: var(--muted); }
-    .timeline { position: relative; padding-left: 26px; margin-top: 12px; }
-    .timeline::before { content: ""; position: absolute; left: 10px; top: 4px; bottom: 4px; width: 2px; background: #23304a; }
-    .t-item { position: relative; margin: 10px 0; }
-    .t-item::before { content: ""; position: absolute; left: -2px; top: 6px; width: 10px; height: 10px; background: var(--brand); border-radius: 999px; box-shadow: 0 0 0 4px rgba(34,211,238,.2); }
-    .foot { margin: 30px 0 12px; text-align: center; color: #8ea1c1; font-size: 12px; }
-    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace; }
+<style>
+  :root {
+    --bg: #0b1220;
+    --card: #0f172a;
+    --muted: #94a3b8;
+    --text: #e2e8f0;
+    --brand: #22d3ee;
+    --accent: #8b5cf6;
+    --ok: #10b981;
+    --warn: #f59e0b;
+    --bad: #ef4444;
+    --grad: radial-gradient(1200px 800px at 90% -10%, rgba(34,211,238, .15), transparent 60%),
+            radial-gradient(900px 600px at 0% 110%, rgba(139,92,246, .15), transparent 60%),
+            linear-gradient(180deg, #0b1220, #0b1220);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    min-height: 100%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--grad);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  a { color: var(--brand); text-decoration: none; }
+  .container { max-width: 1180px; margin: auto; padding: 40px 28px; }
+  h1 { font-size: 48px; line-height: 1.15; margin: 0.2em 0 0.4em; font-weight: 800; color: var(--text); }
+  h2 { font-size: 30px; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+  h3 { font-size: 20px; font-weight: 600; margin-bottom: 10px; color: var(--text); }
+  h4 { font-size: 16px; font-weight: 600; margin-bottom: 8px; color: var(--text); }
+  p { font-size: 16px; }
+  .badge { display: inline-flex; gap: 8px; align-items: center; padding: 6px 10px; border: 1px solid #23304a; border-radius: 999px; color: var(--muted); font-size: 12px; }
+  .card {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(6px);
+    border: 1px solid #23304a;
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 24px;
+  }
+  .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items: start; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+  .btn {
+    padding: 14px 20px;
+    border-radius: 12px;
+    border: 1px solid #23304a;
+    background: #111827;
+    color: #e5e7eb;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-align: center;
+  }
+  .btn:hover {
+    background: #1f2937;
+    transform: translateY(-2px);
+  }
+  .btn.brand {
+    background: linear-gradient(135deg, var(--brand), #60a5fa);
+    color: #0b1220;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(34,211,238, 0.25);
+  }
+  .btn.brand:hover { filter: brightness(1.1); }
+  .grid { display: grid; gap: 24px; }
+  .grid-2 { grid-template-columns: 1fr 1fr; }
+  .grid-3 { grid-template-columns: repeat(3,1fr); }
+  .kpis { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-top: 14px; }
+  .kpi { background: rgba(15,23,42,0.85); border: 1px solid #1e293b; padding: 20px; border-radius: 16px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+  .kpi b { display: block; font-size: 24px; margin-top: 6px; color: var(--ok); }
+  .table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+  .table th, .table td { padding: 14px 12px; border-bottom: 1px solid #334155; font-size: 14px; }
+  .table th { background: #1e293b; color: var(--brand); font-weight: 600; text-align: left; }
+  .callout { border-left: 4px solid var(--brand); background: rgba(11,18,32,0.9); padding: 14px 18px; border-radius: 12px; font-size: 15px; line-height: 1.6; margin-top: 10px; }
+  .tag { font-size: 12px; color: var(--muted); }
+  .pill { display: inline-block; padding: 6px 12px; font-size: 13px; border: 1px solid #334155; border-radius: 9999px; background: rgba(255,255,255,0.05); margin: 4px 6px 0 0; color: var(--muted); }
 
-    /* Responsive */
-    @media (max-width: 980px) {
-      .hero { grid-template-columns: 1fr; gap: 32px; }
-      .grid-2, .grid-3 { grid-template-columns: 1fr; }
-      .kpis { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
-    }
-    @media (max-width: 600px) {
-      h1 { font-size: 32px; }
-      h2 { font-size: 24px; }
-      h3 { font-size: 18px; }
-      h4 { font-size: 14px; }
-      .btn { padding: 12px 16px; font-size: 14px; }
-      .container { padding: 20px 14px; }
-      .callout { font-size: 14px; padding: 12px 14px; }
-    }
-  </style>
+  /* Timeline corregido */
+
+.timeline {
+  position: relative;
+  padding-left: 40px; /* espacio para el texto */
+  margin-top: 12px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0; /* al borde izquierdo del contenedor */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #23304a;
+}
+
+.t-item {
+  position: relative;
+  margin: 14px 0;
+  padding-left: 16px; /* espacio entre la línea/círculo y el texto */
+}
+
+.t-item::before {
+  content: "";
+  position: absolute;
+  left: -5px; /* círculo pegado al borde izquierdo */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background: var(--brand);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(34,211,238,.2);
+}
+
+
+  .foot { margin: 30px 0 12px; text-align: center; color: #8ea1c1; font-size: 12px; }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    .hero { grid-template-columns: 1fr; gap: 32px; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    .kpis { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 32px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 18px; }
+    h4 { font-size: 14px; }
+    .btn { padding: 12px 16px; font-size: 14px; }
+    .container { padding: 20px 14px; }
+    .callout { font-size: 14px; padding: 12px 14px; }
+  }
+</style>
+
 </head>
 <body>
   <div class="container">
@@ -454,30 +490,28 @@
     </a>.
   </p>
 
-  <div style="margin-top: 20px;">
-    <h3>Descargar documentos</h3>
+  <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px;">
+  <a href="https://raw.githubusercontent.com/fabian0071982/suosil/main/files/An%C3%A1lisis_Financiero.pdf" 
+     target="_blank" 
+     aria-label="Descargar Análisis Financiero"
+     style="padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 4px;">
+    📊 Análisis Financiero
+  </a>
 
-    <a href="https://raw.githubusercontent.com/fabian0071982/suosil/main/files/An%C3%A1lisis_Financiero.pdf" 
-       target="_blank" 
-       aria-label="Descargar Análisis Financiero"
-       style="display: inline-block; margin-right: 10px; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 4px;">
-      📊 Análisis Financiero
-    </a>
+  <a href="https://raw.githubusercontent.com/fabian0071982/suosil/main/files/PERFIL_DE_PROYECTO_SUOSIL_Ecuador.pdf" 
+     target="_blank" 
+     aria-label="Descargar Perfil de Proyecto"
+     style="padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 4px;">
+    📄 Perfil de Proyecto
+  </a>
 
-    <a href="https://raw.githubusercontent.com/fabian0071982/suosil/main/files/PERFIL_DE_PROYECTO_SUOSIL_Ecuador.pdf" 
-       target="_blank" 
-       aria-label="Descargar Perfil de Proyecto"
-       style="display: inline-block; margin-right: 10px; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 4px;">
-      📄 Perfil de Proyecto
-    </a>
-
-    <a href="https://raw.githubusercontent.com/fabian0071982/suosil/main/files/Propuesta_Obtención_Fertilizante_Orgánico.pdf" 
-       target="_blank" 
-       aria-label="Descargar Información de la Tecnología"
-       style="display: inline-block; margin-right: 10px; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 4px;">
-      ⚙️ Información de la Tecnología
-    </a>
-  </div>
+  <a href="https://raw.githubusercontent.com/fabian0071982/suosil/main/files/Propuesta_Obtención_Fertilizante_Orgánico.pdf" 
+     target="_blank" 
+     aria-label="Descargar Información de la Tecnología"
+     style="padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 4px;">
+    ⚙️ Información de la Tecnología
+  </a>
+</div>
 </div>
 
     <!-- Pie de página -->
